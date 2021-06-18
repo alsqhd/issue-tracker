@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Label {
+struct Label: Filterable {
     var id: Int
     var name: String
     var description: String?

@@ -7,13 +7,18 @@
 
 import UIKit
 
+struct IssueListViewControllerAction {
+    let showNewIssueView: () -> ()
+}
+
 class IssueListViewController: UIViewController, ViewControllerIdentifierable {
     
-    static func create(_ viewModel: IssueViewModel) -> IssueListViewController {
+    static func create(_ viewModel: IssueViewModel, _ action: IssueListViewControllerAction) -> IssueListViewController {
         guard let vc = storyboard.instantiateViewController(identifier: storyboardID) as? IssueListViewController else {
             return IssueListViewController()
         }
         vc.viewModel = viewModel
+        vc.action = action
         return vc
     }
     
@@ -39,6 +44,7 @@ class IssueListViewController: UIViewController, ViewControllerIdentifierable {
     
     private var isCheckAll: Bool!
     private var viewModel: IssueViewModel!
+    private var action: IssueListViewControllerAction?
     private lazy var dataSource = IssueDataSource(viewModel: viewModel)
     
     override func viewDidLoad() {
@@ -198,5 +204,13 @@ extension IssueListViewController {
 extension IssueListViewController {
     @objc func filterButtonTouched(_ sender: UIBarButtonItem) {
         
+    }
+}
+
+//MARK: - NewPost
+
+extension IssueListViewController {
+    @IBAction func plusButtonTouched(_ sender: Any) {
+        action?.showNewIssueView()
     }
 }

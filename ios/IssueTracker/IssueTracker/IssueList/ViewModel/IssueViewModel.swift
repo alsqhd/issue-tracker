@@ -10,7 +10,7 @@ import Foundation
 class IssueViewModel {
     
     private(set) var issues: [Issue]
-    private(set) var error: Error?
+    private(set) var error: String?
     
     private var fetchIssueListUseCase: FetchIssueListUseCase
 
@@ -26,9 +26,13 @@ class IssueViewModel {
             case .success(let issues):
                 self.issues = issues
             case .failure(let error):
-                self.error = error
+                self.errorHandle(error: error)
             }
         }
+    }
+    
+    private func errorHandle(error: NetworkError) {
+        
     }
 }
 

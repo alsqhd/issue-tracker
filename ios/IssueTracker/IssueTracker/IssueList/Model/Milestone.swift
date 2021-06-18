@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Milestone {
+struct Milestone: Filterable {
     var id: Int
     var name: String
     var description: String?

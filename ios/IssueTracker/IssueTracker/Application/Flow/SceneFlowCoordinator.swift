@@ -8,13 +8,16 @@
 import UIKit
 
 protocol SceneFlowCoordinatorDependencies {
-    func makeIssueListTabBarController() -> UITabBarController
+    func makeIssueListTabBarController(_ viewControllers: [UIViewController]) -> UITabBarController
+    func makeIssueListNavigationController(_ action: IssueListViewControllerAction) -> UINavigationController
+    func makeNewIssueViewController() -> NewIssueViewController
 }
 
 
 class SceneFlowCoordinator {
     private weak var rootVC: UINavigationController?
     private var dependencies: SceneFlowCoordinatorDependencies
+    private var issueListViewController: UINavigationController?
     
     init(_ rootViewController: UINavigationController, _ dependencies: SceneFlowCoordinatorDependencies) {
         self.rootVC = rootViewController
@@ -22,8 +25,17 @@ class SceneFlowCoordinator {
     }
     
     func start() {
-        let vc = dependencies.makeIssueListTabBarController()
+        let issueListVCAction = IssueListViewControllerAction(showNewIssueView: showNewIssueView)
+        issueListViewController = dependencies.makeIssueListNavigationController(issueListVCAction)
+        guard let issueListViewController = issueListViewController else { return }
+        let vc = dependencies.makeIssueListTabBarController([issueListViewController])
         rootVC?.setNavigationBarHidden(true, animated: false)
         rootVC?.pushViewController(vc, animated: true)
+    }
+    
+    func showNewIssueView() {
+        guard let issueListViewController = issueListViewController else { return }
+        let vc = dependencies.makeNewIssueViewController()
+        issueListViewController.pushViewController(vc, animated: true)
     }
 }

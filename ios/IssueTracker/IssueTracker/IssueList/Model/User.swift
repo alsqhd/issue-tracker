@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct User {
+protocol Filterable {
+    var id: Int { get }
+    var name: String { get }
+}
+
+struct User: Filterable {
     var id: Int
     var name: String
     var imageURL: String?

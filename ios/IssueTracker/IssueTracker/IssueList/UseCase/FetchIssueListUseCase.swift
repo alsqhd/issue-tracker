@@ -10,17 +10,26 @@ import UIKit
 
 protocol FetchIssueListUseCase {
     
-    func excute(completion: @escaping (Result<[Issue], Error>) -> Void)
+    func excute(completion: @escaping (Result<[Issue], NetworkError>) -> Void)
+}
+
+enum NetworkError: Error {
+    case BadURL
+    case DecodingError(Error)
+    case EncodingError(Error)
+    case Unknown
+    case Status(Int)
 }
 
 class DefaultFetchIssueListUseCase: FetchIssueListUseCase {
-    func excute(completion: @escaping (Result<[Issue], Error>) -> Void) {
+    func excute(completion: @escaping (Result<[Issue], NetworkError>) -> Void) {
         // 기준이 될 UseCase 입니다. NetworkService를 가지고 있으며 Network 통신을 이용한 Issue List Fetch 가 이루어 져야 합니다.
     }
 }
 
 class MockFetchIssueListUseCase: FetchIssueListUseCase {
-    func excute(completion: @escaping (Result<[Issue], Error>) -> Void) {
+    
+    func excute(completion: @escaping (Result<[Issue], NetworkError>) -> Void) {
         completion(.success(IssueListMock.data))
     }
 }
