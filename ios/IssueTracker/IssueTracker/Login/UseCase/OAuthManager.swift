@@ -49,13 +49,13 @@ extension DefaultOAuthManager {
         
         networkManager.get(path: "/login/auth", code, type: JWT.self)
             .receive(on: DispatchQueue.main)
-            .sink { error in
+            .sink { [weak self] error in
                 switch error {
-                case .failure(let error): self.error = error
+                case .failure(let error): self?.error = error
                 case .finished: break
                 }
-            } receiveValue: { jwt in
-                self.jwt = jwt
+            } receiveValue: { [weak self] jwt in
+                self?.jwt = jwt
             }.store(in: &cancelBag)
     }
     

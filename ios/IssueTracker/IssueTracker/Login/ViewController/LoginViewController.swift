@@ -43,9 +43,9 @@ extension LoginViewController: Alertable {
         viewModel.fetchError()
             .dropFirst(3)
             .receive(on: DispatchQueue.main)
-            .sink { error in
-                self.showAlert(message: error)
-                self.webAuthSession = nil
+            .sink { [weak self] error in
+                self?.showAlert(message: error)
+                self?.webAuthSession = nil
             }.store(in: &cancelBag)
     }
     
@@ -59,8 +59,8 @@ extension LoginViewController: ASWebAuthenticationPresentationContextProviding {
     }
     
     private func configureWebAuthSession() {
-        viewModel.initAuthSession { authenticationSession in
-            self.webAuthSession = authenticationSession
+        viewModel.initAuthSession { [weak self] authenticationSession in
+            self?.webAuthSession = authenticationSession
         }
         webAuthSession?.presentationContextProvider = self
     }

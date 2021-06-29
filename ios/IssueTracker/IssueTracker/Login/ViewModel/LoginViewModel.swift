@@ -43,8 +43,8 @@ extension LoginViewModel {
     private func bindError() {
         loginUseCase.fetchError()
             .receive(on: DispatchQueue.main)
-            .sink { error in
-                self.handleError(error)
+            .sink { [weak self] error in
+                self?.handleError(error)
             }.store(in: &cancelBag)
     }
     

@@ -28,12 +28,12 @@ extension LoginUseCase {
     
     func initAuthSession(completion: @escaping (ASWebAuthenticationSession) -> ()) {
         oauthManager.requestCode { url, callBackUrlScheme in
-            completion(ASWebAuthenticationSession.init(url: url, callbackURLScheme: callBackUrlScheme) { (callBack: URL?, error: Error?) in
+            completion(ASWebAuthenticationSession.init(url: url, callbackURLScheme: callBackUrlScheme) { [weak self] (callBack: URL?, error: Error?) in
                 guard error == nil, let successURL = callBack else {
-                    self.error = NetworkError.OAuthError(error!)
+                    self?.error = NetworkError.OAuthError(error!)
                     return
                 }
-                self.oauthManager.requestJWT(with: successURL)
+                self?.oauthManager.requestJWT(with: successURL)
             })
         }
     }
@@ -49,8 +49,8 @@ extension LoginUseCase {
         
         oauthManager.fetchError()
             .receive(on: DispatchQueue.main)
-            .sink { error in
-                self.error = error
+            .sink { [weak self] error in
+                self?.error = error
             }.store(in: &cancelBag)
     }
     
