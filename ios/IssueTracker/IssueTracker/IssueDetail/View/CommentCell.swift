@@ -8,7 +8,7 @@
 import UIKit
 import MarkdownView
 
-class CommentCell: UITableViewCell, UINibCreatable {
+class CommentCell: UITableViewCell, UINibCreatable, DateManagable {
 
     @IBOutlet private weak var profileImageView: UIImageView!
     @IBOutlet private weak var userNameLabel: UILabel!
@@ -16,7 +16,9 @@ class CommentCell: UITableViewCell, UINibCreatable {
     @IBOutlet private weak var commentView: MarkdownView!
     
     func fillUI(_ comment: Comment) {
+        profileImageView.load(url: comment.author.profileImage)
         userNameLabel.text = comment.author.name
+        elapsedTimeLabel.text = intervalTime(historyTime: comment.createDateTime)
         commentView.load(markdown: comment.contents)
     }
 }
