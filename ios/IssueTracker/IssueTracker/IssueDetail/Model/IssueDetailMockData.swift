@@ -15,7 +15,7 @@ struct IssueDetailMock {
 
 struct CommentMock {
     static var comment1: Comment {
-        return .init(id: 1, author: UserMock.dumba, contents: "이슈 상세 페이지를 기존 `TableView`에서 `CollectionView`로 바꾸고자 합니다.", createDateTime: "2021-06-28T12:48:22.062Z", emojis: [EmojiMock.smile, EmojiMock.eyes])
+        return .init(id: 1, author: UserMock.dumba, contents: "이슈 상세 페이지를 기존 `TableView`에서 `CollectionView`로 바꾸고자 합니다.", createDateTime: "2021-06-28T12:48:22.062Z", emojis: [EmojiMock.smile, EmojiMock.eyes, EmojiMock.eyes, EmojiMock.eyes, EmojiMock.eyes])
     }
     
     static var comment2: Comment {

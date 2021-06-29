@@ -68,6 +68,7 @@
 		FFC803D2268971CC000D6ACE /* IssueDetailMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC803D1268971CC000D6ACE /* IssueDetailMockData.swift */; };
 		FFC803D426899172000D6ACE /* UIImageView+imageLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC803D326899172000D6ACE /* UIImageView+imageLoad.swift */; };
 		FFC803D726899288000D6ACE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FFC803D626899288000D6ACE /* Kingfisher */; };
+		FFC803D9268ADE8F000D6ACE /* EmojiLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC803D8268ADE8F000D6ACE /* EmojiLabel.swift */; };
 		FFCDAC5A2683007C00D4ABFF /* FetchIssueDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCDAC592683007C00D4ABFF /* FetchIssueDetailUseCase.swift */; };
 		FFCDAC5C268318CC00D4ABFF /* DateManagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCDAC5B268318CC00D4ABFF /* DateManagable.swift */; };
 		FFCDAC63268322C100D4ABFF /* OpenCloseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCDAC62268322C000D4ABFF /* OpenCloseLabel.swift */; };
@@ -176,6 +177,7 @@
 		FFAC0E462681B0F100E88E90 /* IssueDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetail.swift; sourceTree = "<group>"; };
 		FFC803D1268971CC000D6ACE /* IssueDetailMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailMockData.swift; sourceTree = "<group>"; };
 		FFC803D326899172000D6ACE /* UIImageView+imageLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+imageLoad.swift"; sourceTree = "<group>"; };
+		FFC803D8268ADE8F000D6ACE /* EmojiLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiLabel.swift; sourceTree = "<group>"; };
 		FFCDAC592683007C00D4ABFF /* FetchIssueDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchIssueDetailUseCase.swift; sourceTree = "<group>"; };
 		FFCDAC5B268318CC00D4ABFF /* DateManagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManagable.swift; sourceTree = "<group>"; };
 		FFCDAC62268322C000D4ABFF /* OpenCloseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCloseLabel.swift; sourceTree = "<group>"; };
@@ -586,6 +588,7 @@
 				FFE2AA192681CA180026EBD5 /* CommentCell.swift */,
 				FFE2AA1A2681CA180026EBD5 /* CommentCell.xib */,
 				FFCDAC62268322C000D4ABFF /* OpenCloseLabel.swift */,
+				FFC803D8268ADE8F000D6ACE /* EmojiLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -869,6 +872,7 @@
 				FF89A997267075CD00983577 /* Issue.swift in Sources */,
 				FF89A99D2670784200983577 /* Milestone.swift in Sources */,
 				AE011CF4267F8C7600181FB9 /* FetchFilterUseCase.swift in Sources */,
+				FFC803D9268ADE8F000D6ACE /* EmojiLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

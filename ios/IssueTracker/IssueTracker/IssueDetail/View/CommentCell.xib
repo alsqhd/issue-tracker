@@ -43,8 +43,8 @@
                         <color key="textColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ob4-5I-byx" customClass="MarkdownView" customModule="MarkdownView">
-                        <rect key="frame" x="52" y="57" width="424" height="112"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ob4-5I-byx" customClass="MarkdownView" customModule="MarkdownView">
+                        <rect key="frame" x="52" y="57" width="424" height="125"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQE-zK-bcl">
@@ -52,10 +52,11 @@
                         <color key="tintColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
                         <state key="normal" image="ellipsis" catalog="system"/>
                     </button>
-                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQc-9O-XRr">
-                        <rect key="frame" x="16" y="188" width="77" height="44"/>
+                    <stackView opaque="NO" contentMode="left" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vQc-9O-XRr">
+                        <rect key="frame" x="16" y="198" width="77" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="77" id="tpd-fz-Ml7"/>
+                            <constraint firstAttribute="height" constant="32" id="MAF-qx-DCm"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="tpd-fz-Ml7"/>
                         </constraints>
                     </stackView>
                 </subviews>
@@ -81,6 +82,7 @@
             <connections>
                 <outlet property="commentView" destination="ob4-5I-byx" id="IYg-Rh-Ab3"/>
                 <outlet property="elapsedTimeLabel" destination="OUb-Yu-6eX" id="ABw-2y-len"/>
+                <outlet property="emojiStackView" destination="vQc-9O-XRr" id="tIa-Bv-Ibd"/>
                 <outlet property="profileImageView" destination="lv5-JG-XtS" id="QoJ-1G-Ay2"/>
                 <outlet property="userNameLabel" destination="wbr-is-bWs" id="PP4-gn-fKV"/>
             </connections>
