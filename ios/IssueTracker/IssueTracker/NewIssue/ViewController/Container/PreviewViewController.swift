@@ -17,7 +17,7 @@ final class PreviewViewController: UIViewController, ViewControllerIdentifierabl
         return vc
     }
     
-    @IBOutlet weak var markdownView: MarkdownView!
+    @IBOutlet private weak var markdownView: MarkdownView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

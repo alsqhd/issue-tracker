@@ -15,10 +15,10 @@ protocol FetchFilterUseCase {
 
 final class DefaultFetchFilterUseCase: FetchFilterUseCase {
     
-    private var networkManager: NetworkManageable
+    private var networkManager: NetworkManagerable
     private var cancelBag = Set<AnyCancellable>()
     
-    init(networkManager: NetworkManageable) {
+    init(networkManager: NetworkManagerable) {
         self.networkManager = networkManager
     }
     
@@ -28,9 +28,9 @@ final class DefaultFetchFilterUseCase: FetchFilterUseCase {
 extension DefaultFetchFilterUseCase {
     
     func excute(completion: @escaping (Result<FilterList, NetworkError>) -> Void) {
-        let users = networkManager.get(path: "/users", type: [User].self)
-        let labels = networkManager.get(path: "/labels", type: [Label].self)
-        let milestones = networkManager.get(path: "/milestones", type: [Milestone].self)
+        let users = networkManager.get(path: "/users", nil, type: [User].self)
+        let labels = networkManager.get(path: "/labels", nil, type: [Label].self)
+        let milestones = networkManager.get(path: "/milestones", nil, type: [Milestone].self)
         
         users
             .zip(labels, milestones)

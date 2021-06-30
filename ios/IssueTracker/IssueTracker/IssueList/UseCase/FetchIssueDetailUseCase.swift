@@ -15,15 +15,15 @@ protocol FetchIssueDetailUseCase {
 
 final class DefaultFetchIssueDetailUseCase: FetchIssueDetailUseCase {
 
-    private var networkManager: NetworkManageable
+    private var networkManager: NetworkManagerable
     private var cancelBag = Set<AnyCancellable>()
     
-    init(networkManager: NetworkManageable) {
+    init(networkManager: NetworkManagerable) {
         self.networkManager = networkManager
     }
     
     func excute(id: Int, completion: @escaping (Result<IssueDetail, NetworkError>) -> Void) {
-        networkManager.get(path: "/issues/\(id)", type: IssueDetail.self)
+        networkManager.get(path: "/issues/\(id)", nil, type: IssueDetail.self)
             .receive(on: DispatchQueue.main)
             .sink { error in
                 switch error {
