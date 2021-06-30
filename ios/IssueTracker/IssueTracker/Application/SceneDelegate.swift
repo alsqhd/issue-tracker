@@ -19,7 +19,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = navigationController
-        flowCoordinator.bindLogin()
+        flowCoordinator.start()
         window?.makeKeyAndVisible()
     }
 }

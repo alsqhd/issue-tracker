@@ -36,7 +36,12 @@ class SceneFlowCoordinator {
 
 extension SceneFlowCoordinator {
     
-    func bindLogin() {
+    func start() {
+        rootVC?.setNavigationBarHidden(true, animated: false)
+        bindLogin()
+    }
+    
+    private func bindLogin() {
         LoginManager.shared.fetchIsLoggedin()
             .receive(on: DispatchQueue.main)
             .sink { isLoggedin in
@@ -50,8 +55,6 @@ extension SceneFlowCoordinator {
     
     private func pushLoginVC() {
         let vc = dependencies.makeLoginViewController()
-
-        rootVC?.setNavigationBarHidden(true, animated: false)
         rootVC?.pushViewController(vc, animated: true)
     }
     
@@ -63,8 +66,7 @@ extension SceneFlowCoordinator {
        
         let viewControllers = [issueListViewController, myAccountViewController]
         let tabBarController = dependencies.makeIssueListTabBarController(viewControllers)
-
-        rootVC?.setNavigationBarHidden(true, animated: false)
+        
         rootVC?.pushViewController(tabBarController, animated: true)
     }
     
