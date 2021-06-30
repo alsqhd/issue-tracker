@@ -101,7 +101,7 @@ extension IssueDetailViewController: UITableViewDataSource {
         if indexPath.row == 0 {
             cell.fillUI(viewModel.issue.mainComment)
         } else {
-            guard let comment = viewModel.issue.comments?[indexPath.row] else { return UITableViewCell() }
+            guard let comment = viewModel.issue.comments?[indexPath.row - 1] else { return UITableViewCell() }
             cell.fillUI(comment)
         }
         return cell
@@ -112,6 +112,6 @@ extension IssueDetailViewController: UITableViewDataSource {
 
 extension IssueDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 200
     }
 }

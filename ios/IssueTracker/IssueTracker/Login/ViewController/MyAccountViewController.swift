@@ -43,14 +43,12 @@ extension MyAccountViewController {
         let userImage = viewModel.user?.profileImage
         
         tabBarItem.title = "Profile"
-        tabBarItem.image = userImage.withRenderingMode(.alwaysOriginal)
         tabBarItem.imageInsets = UIEdgeInsets(top: 110, left: 110, bottom: 110, right: 110)
     }
     
     private func fillUI() {
         guard let user = viewModel.user else { return }
         
-        self.profileImageView.image = user.image
         self.nameLabel.text = user.name
         self.emailLabel.text = user.email
     }

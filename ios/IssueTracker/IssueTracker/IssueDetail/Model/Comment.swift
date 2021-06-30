@@ -12,5 +12,5 @@ struct Comment: Decodable {
     let author: User
     let contents: String
     let createDateTime: String
-    let emojis: [Emoji]
+    let emojis: [Emoji]?
 }

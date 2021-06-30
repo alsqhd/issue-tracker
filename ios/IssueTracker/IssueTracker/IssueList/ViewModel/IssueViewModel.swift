@@ -86,7 +86,7 @@ extension IssueViewModel {
         fetchIssueDetailUseCase.excute(id: id) { [weak self] result in
             switch result {
             case .success(let issueDetail):
-                completion(issueDetail)
+                completion(IssueDetailMock.data)
             case .failure(let error):
                 self?.handleError(error)
             }
