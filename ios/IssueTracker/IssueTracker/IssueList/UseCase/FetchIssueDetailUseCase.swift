@@ -23,7 +23,7 @@ final class DefaultFetchIssueDetailUseCase: FetchIssueDetailUseCase {
     }
     
     func excute(id: Int, completion: @escaping (Result<IssueDetail, NetworkError>) -> Void) {
-        networkManager.get(path: "/issues/\(id)", type: IssueDetail.self)
+        networkManager.get(path: "/issues/\(id)", nil, type: IssueDetail.self)
             .receive(on: DispatchQueue.main)
             .sink { error in
                 switch error {

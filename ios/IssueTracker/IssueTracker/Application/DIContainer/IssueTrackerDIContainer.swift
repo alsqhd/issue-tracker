@@ -13,36 +13,10 @@ final class IssueTrackerDIContainer: SceneFlowCoordinatorDependencies {
     private let issueListFilterUseCase = IssueListFilterUseCase()
     private let newIssueFilterUseCase = NewIssueFilterUseCase()
     
-    private func makeFetchIssueListUseCase() -> FetchIssueListUseCase {
-        return DefaultFetchIssueListUseCase(networkManager: networkManager)
-    }
-    
-    private func makeFetchIssueDetailUseCase() -> FetchIssueDetailUseCase {
-        return DefaultFetchIssueDetailUseCase(networkManager: networkManager)
-    }
-    
-    private func makeFetchFilterUseCase() -> FetchFilterUseCase {
-        return DefaultFetchFilterUseCase(networkManager: networkManager)
-    }
-    
-    private func makeIssueListViewModel() -> IssueViewModel {
-        return IssueViewModel(makeFetchIssueListUseCase(), issueListFilterUseCase, makeFetchIssueDetailUseCase())
-    }
-    
-    private func makeFilterViewModel(_ isIssueListDelegate: Bool) -> FilterViewModel {
-        let usecase: FilterUseCase = isIssueListDelegate ? issueListFilterUseCase : newIssueFilterUseCase
-        return FilterViewModel(makeFetchFilterUseCase(), usecase, isIssueListDelegate)
-    }
-    
-    private func makeIssueListViewController(_ action: IssueListViewControllerAction) -> IssueListViewController {
-        let viewModel = makeIssueListViewModel()
-        let dataSource = IssueDataSource(viewModel: viewModel)
-        return IssueListViewController.create(viewModel, dataSource, action)
-    }
-    
-    func makeIssueFilterViewController(_ isIssueListDelegate: Bool) -> IssueFilterViewController {
-        return IssueFilterViewController.create(makeFilterViewModel(isIssueListDelegate))
-    }
+}
+
+
+extension IssueTrackerDIContainer {
     
     func makeIssueListNavigationController(_ action: IssueListViewControllerAction) -> UINavigationController {
         return UINavigationController(rootViewController: makeIssueListViewController(action))
@@ -57,6 +31,80 @@ final class IssueTrackerDIContainer: SceneFlowCoordinatorDependencies {
     func makeSceneFlowCoordinator(_ rootViewController: UINavigationController) -> SceneFlowCoordinator {
         return SceneFlowCoordinator(rootViewController, self)
     }
+}
+
+//MARK: - Login ViewController
+
+extension IssueTrackerDIContainer {
+    
+    private func makeOAuthManager() -> OAuthManagerable {
+        return MockOAuthManager(networkManager: networkManager)
+    }
+    
+    private func makeLoginUseCase() -> LoginUseCase {
+        return LoginUseCase(loginManager: makeOAuthManager())
+    }
+    
+    private func makeLoginViewModel() -> LoginViewModel {
+        return LoginViewModel(loginUseCase: makeLoginUseCase())
+    }
+    
+    private func makeMyAccountViewModel() -> MyAccountViewModel {
+        return MyAccountViewModel(loginUseCase: makeLoginUseCase())
+    }
+    
+    func makeLoginViewController() -> LoginViewController {
+        return LoginViewController.create(makeLoginViewModel())
+    }
+    
+    func makeMyAccountViewController() -> MyAccountViewController {
+        return MyAccountViewController.create(makeMyAccountViewModel())
+    }
+    
+}
+
+//MARK: - IssueList ViewController
+
+extension IssueTrackerDIContainer {
+    
+    private func makeFetchIssueListUseCase() -> FetchIssueListUseCase {
+        return DefaultFetchIssueListUseCase(networkManager: networkManager)
+    }
+    
+    private func makeFetchIssueDetailUseCase() -> FetchIssueDetailUseCase {
+        return DefaultFetchIssueDetailUseCase(networkManager: networkManager)
+    }
+
+    
+    private func makeIssueListViewModel() -> IssueViewModel {
+        return IssueViewModel(makeFetchIssueListUseCase(), issueListFilterUseCase, makeFetchIssueDetailUseCase())
+    }
+    
+    private func makeIssueListViewController(_ action: IssueListViewControllerAction) -> IssueListViewController {
+        let viewModel = makeIssueListViewModel()
+        let dataSource = IssueDataSource(viewModel: viewModel)
+        return IssueListViewController.create(viewModel, dataSource, action)
+    }
+    
+}
+
+//MARK: - Filter ViewController
+
+extension IssueTrackerDIContainer {
+    
+    private func makeFetchFilterUseCase() -> FetchFilterUseCase {
+        return DefaultFetchFilterUseCase(networkManager: networkManager)
+    }
+    
+    private func makeFilterViewModel(_ isIssueListDelegate: Bool) -> FilterViewModel {
+        let usecase: FilterUseCase = isIssueListDelegate ? issueListFilterUseCase : newIssueFilterUseCase
+        return FilterViewModel(makeFetchFilterUseCase(), usecase, isIssueListDelegate)
+    }
+    
+    func makeIssueFilterViewController(_ isIssueListDelegate: Bool) -> IssueFilterViewController {
+        return IssueFilterViewController.create(makeFilterViewModel(isIssueListDelegate))
+    }
+    
 }
 
 //MARK: - NewIssue ViewController

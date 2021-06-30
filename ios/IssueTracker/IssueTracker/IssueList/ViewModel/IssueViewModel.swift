@@ -56,6 +56,8 @@ extension IssueViewModel {
             self.error = "디코딩 에러"
         case .EncodingError:
             self.error = "인코딩 에러"
+        case .OAuthError(let error):
+            self.error = "\(error.localizedDescription)"
         case .Unknown:
             self.error = "잘 모르겠네요😅"
         }
@@ -81,12 +83,12 @@ extension IssueViewModel {
     func selectIssue(at index: Int, completion: @escaping (IssueDetail) -> Void ) {
         let id = issues[index].id
         
-        fetchIssueDetailUseCase.excute(id: id) { result in
+        fetchIssueDetailUseCase.excute(id: id) { [weak self] result in
             switch result {
             case .success(let issueDetail):
                 completion(IssueDetailMock.data)
             case .failure(let error):
-                self.handleError(error)
+                self?.handleError(error)
             }
         }
     }

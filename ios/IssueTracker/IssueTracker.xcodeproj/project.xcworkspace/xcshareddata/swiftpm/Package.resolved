@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "JWTDecode",
+        "repositoryURL": "https://github.com/auth0/JWTDecode.swift",
+        "state": {
+          "branch": null,
+          "revision": "22e3d174e9df2962f0268a31dac45e5ea54a6e62",
+          "version": "2.6.1"
+        }
+      },
+      {
         "package": "Kingfisher",
         "repositoryURL": "https://github.com/onevcat/Kingfisher",
         "state": {

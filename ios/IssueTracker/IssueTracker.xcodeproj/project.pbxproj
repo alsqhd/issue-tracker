@@ -26,9 +26,16 @@
 		AE7D39362671BC7200BF9487 /* UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7D39352671BC7200BF9487 /* UtilityTests.swift */; };
 		AE7D393D2671BC9400BF9487 /* UIColor+hexToUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7505322670EE0600BA14F7 /* UIColor+hexToUIColor.swift */; };
 		AE7D39432672033800BF9487 /* UIView+HiddenWithAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7D39422672033800BF9487 /* UIView+HiddenWithAnimation.swift */; };
+		AE90D87F2684F1C8004719C5 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90D87E2684F1C8004719C5 /* Alertable.swift */; };
+		AE90D8812684F30E004719C5 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90D8802684F30E004719C5 /* MyAccountViewController.swift */; };
+		AE90D883268502A4004719C5 /* MyAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90D882268502A4004719C5 /* MyAccountViewModel.swift */; };
 		AEB514952681DA32007DC865 /* FilterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB514942681DA32007DC865 /* FilterList.swift */; };
 		AEB5149826821C27007DC865 /* IssueFilterViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB5149726821C27007DC865 /* IssueFilterViewControllerDelegate.swift */; };
+		AEB5149A2682380A007DC865 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB514992682380A007DC865 /* LoginViewController.swift */; };
+		AEB5149D26825A99007DC865 /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB5149C26825A99007DC865 /* OAuthManager.swift */; };
 		AEB5547A267B2B1D003F631E /* IssueFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB55479267B2B1D003F631E /* IssueFilterViewController.swift */; };
+		AEC6A0B226896C8300E4CF66 /* MockOAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC6A0B126896C8300E4CF66 /* MockOAuthManager.swift */; };
+		AEC6A0B4268994DF00E4CF66 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC6A0B3268994DF00E4CF66 /* LoginManager.swift */; };
 		AECEA442266F38D000855F20 /* IssueDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEA441266F38D000855F20 /* IssueDataSource.swift */; };
 		AECEA445266F3AD900855F20 /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEA443266F3AD900855F20 /* IssueCell.swift */; };
 		AECEA446266F3AD900855F20 /* IssueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECEA444266F3AD900855F20 /* IssueCell.xib */; };
@@ -36,12 +43,16 @@
 		AED83A4B2677453A00C36CA4 /* NetworkComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED83A4A2677453A00C36CA4 /* NetworkComponents.swift */; };
 		AEE2A4D32670A00300FA6274 /* IssueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE2A4D22670A00300FA6274 /* IssueViewModel.swift */; };
 		AEE2A4D52670A8C000FA6274 /* IssueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE2A4D42670A8C000FA6274 /* IssueLabel.swift */; };
+		AEFD8EA926842BF800F46832 /* LoginURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFD8EA826842BF800F46832 /* LoginURL.swift */; };
+		AEFD8EAF2684502A00F46832 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFD8EAE2684502A00F46832 /* Keychain.swift */; };
+		AEFD8EB12684596C00F46832 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFD8EB02684596C00F46832 /* KeychainManager.swift */; };
+		AEFD8EB32684632500F46832 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFD8EB22684632500F46832 /* LoginUseCase.swift */; };
+		AEFD8EB526846F7A00F46832 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFD8EB426846F7A00F46832 /* LoginViewModel.swift */; };
 		FF76F8B52677300300342633 /* UIBarButtonItem+setTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76F8B42677300300342633 /* UIBarButtonItem+setTitle.swift */; };
 		FF76F8C82678701000342633 /* IssueTrackerDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76F8C72678701000342633 /* IssueTrackerDIContainer.swift */; };
 		FF76F8CC2678704200342633 /* SceneFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76F8CB2678704200342633 /* SceneFlowCoordinator.swift */; };
 		FF76F8CE2678739B00342633 /* ViewControllerIdentifierable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76F8CD2678739B00342633 /* ViewControllerIdentifierable.swift */; };
 		FF76F8D12678772000342633 /* FetchIssueListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76F8D02678772000342633 /* FetchIssueListUseCase.swift */; };
-		FF79E018267C73570088D2C7 /* MarkdownView in Frameworks */ = {isa = PBXBuildFile; productRef = FF79E017267C73570088D2C7 /* MarkdownView */; };
 		FF79E024267C74F00088D2C7 /* NewIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79E023267C74F00088D2C7 /* NewIssueViewController.swift */; };
 		FF79E027267C750A0088D2C7 /* MarkdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79E026267C750A0088D2C7 /* MarkdownViewController.swift */; };
 		FF79E029267C75130088D2C7 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79E028267C75130088D2C7 /* PreviewViewController.swift */; };
@@ -69,6 +80,8 @@
 		FFC803D426899172000D6ACE /* UIImageView+imageLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC803D326899172000D6ACE /* UIImageView+imageLoad.swift */; };
 		FFC803D726899288000D6ACE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FFC803D626899288000D6ACE /* Kingfisher */; };
 		FFC803D9268ADE8F000D6ACE /* EmojiLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC803D8268ADE8F000D6ACE /* EmojiLabel.swift */; };
+		FFBEB01A2685AE7500617054 /* MarkdownView in Frameworks */ = {isa = PBXBuildFile; productRef = FFBEB0192685AE7500617054 /* MarkdownView */; };
+		FFBEB01D2685AE9600617054 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = FFBEB01C2685AE9600617054 /* JWTDecode */; };
 		FFCDAC5A2683007C00D4ABFF /* FetchIssueDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCDAC592683007C00D4ABFF /* FetchIssueDetailUseCase.swift */; };
 		FFCDAC5C268318CC00D4ABFF /* DateManagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCDAC5B268318CC00D4ABFF /* DateManagable.swift */; };
 		FFCDAC63268322C100D4ABFF /* OpenCloseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCDAC62268322C000D4ABFF /* OpenCloseLabel.swift */; };
@@ -131,9 +144,16 @@
 		AE7D39352671BC7200BF9487 /* UtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityTests.swift; sourceTree = "<group>"; };
 		AE7D39372671BC7200BF9487 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE7D39422672033800BF9487 /* UIView+HiddenWithAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+HiddenWithAnimation.swift"; sourceTree = "<group>"; };
+		AE90D87E2684F1C8004719C5 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		AE90D8802684F30E004719C5 /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		AE90D882268502A4004719C5 /* MyAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewModel.swift; sourceTree = "<group>"; };
 		AEB514942681DA32007DC865 /* FilterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterList.swift; sourceTree = "<group>"; };
 		AEB5149726821C27007DC865 /* IssueFilterViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueFilterViewControllerDelegate.swift; sourceTree = "<group>"; };
+		AEB514992682380A007DC865 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AEB5149C26825A99007DC865 /* OAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
 		AEB55479267B2B1D003F631E /* IssueFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueFilterViewController.swift; sourceTree = "<group>"; };
+		AEC6A0B126896C8300E4CF66 /* MockOAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOAuthManager.swift; sourceTree = "<group>"; };
+		AEC6A0B3268994DF00E4CF66 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		AECEA441266F38D000855F20 /* IssueDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDataSource.swift; sourceTree = "<group>"; };
 		AECEA443266F3AD900855F20 /* IssueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
 		AECEA444266F3AD900855F20 /* IssueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IssueCell.xib; sourceTree = "<group>"; };
@@ -141,6 +161,11 @@
 		AED83A4A2677453A00C36CA4 /* NetworkComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkComponents.swift; sourceTree = "<group>"; };
 		AEE2A4D22670A00300FA6274 /* IssueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewModel.swift; sourceTree = "<group>"; };
 		AEE2A4D42670A8C000FA6274 /* IssueLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueLabel.swift; sourceTree = "<group>"; };
+		AEFD8EA826842BF800F46832 /* LoginURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginURL.swift; sourceTree = "<group>"; };
+		AEFD8EAE2684502A00F46832 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		AEFD8EB02684596C00F46832 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		AEFD8EB22684632500F46832 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		AEFD8EB426846F7A00F46832 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FF76F8B42677300300342633 /* UIBarButtonItem+setTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+setTitle.swift"; sourceTree = "<group>"; };
 		FF76F8C72678701000342633 /* IssueTrackerDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTrackerDIContainer.swift; sourceTree = "<group>"; };
 		FF76F8CB2678704200342633 /* SceneFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -211,7 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFC803D726899288000D6ACE /* Kingfisher in Frameworks */,
-				FF79E018267C73570088D2C7 /* MarkdownView in Frameworks */,
+				FFBEB01D2685AE9600617054 /* JWTDecode in Frameworks */,
+				FFBEB01A2685AE7500617054 /* MarkdownView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +329,7 @@
 				AE7505322670EE0600BA14F7 /* UIColor+hexToUIColor.swift */,
 				FF76F8B42677300300342633 /* UIBarButtonItem+setTitle.swift */,
 				FF76F8CD2678739B00342633 /* ViewControllerIdentifierable.swift */,
+				AE90D87E2684F1C8004719C5 /* Alertable.swift */,
 				FFCDAC5B268318CC00D4ABFF /* DateManagable.swift */,
 				FFCDAC662685479E00D4ABFF /* FilterUseCase.swift */,
 				FFC803D326899172000D6ACE /* UIImageView+imageLoad.swift */,
@@ -337,6 +364,16 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		AEB5149B26823810007DC865 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AEFD8EB62684756200F46832 /* ViewController */,
+				AEFD8EB72684756F00F46832 /* ViewModel */,
+				AEFD8EB82684757D00F46832 /* UseCase */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		AEB5547B267B2B31003F631E /* IssueFilter */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,8 +391,47 @@
 			children = (
 				AED83A4826772D6600C36CA4 /* NetworkService.swift */,
 				AED83A4A2677453A00C36CA4 /* NetworkComponents.swift */,
+				AEFD8EA826842BF800F46832 /* LoginURL.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		AEFD8EB62684756200F46832 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AEB514992682380A007DC865 /* LoginViewController.swift */,
+				AE90D8802684F30E004719C5 /* MyAccountViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AEFD8EB72684756F00F46832 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AEFD8EB426846F7A00F46832 /* LoginViewModel.swift */,
+				AE90D882268502A4004719C5 /* MyAccountViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AEFD8EB82684757D00F46832 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				AEFD8EB22684632500F46832 /* LoginUseCase.swift */,
+				AEC6A0B3268994DF00E4CF66 /* LoginManager.swift */,
+				AEB5149C26825A99007DC865 /* OAuthManager.swift */,
+				AEC6A0B126896C8300E4CF66 /* MockOAuthManager.swift */,
+				AEFD8EB02684596C00F46832 /* KeychainManager.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		AEFD8EB9268475DD00F46832 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				AEFD8EAE2684502A00F46832 /* Keychain.swift */,
+			);
+			path = Keychain;
 			sourceTree = "<group>";
 		};
 		FF76F8C226786FD000342633 /* Application */ = {
@@ -480,6 +556,7 @@
 			isa = PBXGroup;
 			children = (
 				FF76F8C226786FD000342633 /* Application */,
+				AEB5149B26823810007DC865 /* Login */,
 				FF89A963266F0BD000983577 /* Main.storyboard */,
 				FF89A98E266F116000983577 /* IssueList */,
 				AEB5547B267B2B31003F631E /* IssueFilter */,
@@ -487,6 +564,7 @@
 				FFAC0E422681B09A00E88E90 /* IssueDetail */,
 				AE7505372670EFDC00BA14F7 /* Utility */,
 				AED83A4726772D1F00C36CA4 /* Network */,
+				AEFD8EB9268475DD00F46832 /* Keychain */,
 				FF89A98D266F109800983577 /* SupportingFiles */,
 			);
 			path = IssueTracker;
@@ -646,8 +724,9 @@
 			);
 			name = IssueTracker;
 			packageProductDependencies = (
-				FF79E017267C73570088D2C7 /* MarkdownView */,
 				FFC803D626899288000D6ACE /* Kingfisher */,
+				FFBEB0192685AE7500617054 /* MarkdownView */,
+				FFBEB01C2685AE9600617054 /* JWTDecode */,
 			);
 			productName = IssueTracker;
 			productReference = FF89A95A266F0BD000983577 /* IssueTracker.app */;
@@ -729,8 +808,9 @@
 			);
 			mainGroup = FF89A951266F0BD000983577;
 			packageReferences = (
-				FF79E016267C73570088D2C7 /* XCRemoteSwiftPackageReference "MarkdownView" */,
 				FFC803D526899288000D6ACE /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				FFBEB0182685AE7500617054 /* XCRemoteSwiftPackageReference "MarkdownView" */,
+				FFBEB01B2685AE9600617054 /* XCRemoteSwiftPackageReference "JWTDecode" */,
 			);
 			productRefGroup = FF89A95B266F0BD000983577 /* Products */;
 			projectDirPath = "";
@@ -821,7 +901,9 @@
 				FF79E024267C74F00088D2C7 /* NewIssueViewController.swift in Sources */,
 				AE011CEF267F8A5100181FB9 /* SectionListCell.swift in Sources */,
 				AECEA445266F3AD900855F20 /* IssueCell.swift in Sources */,
+				AEC6A0B4268994DF00E4CF66 /* LoginManager.swift in Sources */,
 				AE7D39432672033800BF9487 /* UIView+HiddenWithAnimation.swift in Sources */,
+				AE90D883268502A4004719C5 /* MyAccountViewModel.swift in Sources */,
 				FF76F8CC2678704200342633 /* SceneFlowCoordinator.swift in Sources */,
 				AECEA442266F38D000855F20 /* IssueDataSource.swift in Sources */,
 				FFAC0E472681B0F100E88E90 /* IssueDetail.swift in Sources */,
@@ -836,7 +918,9 @@
 				FF79E03A26806CCE0088D2C7 /* ImageFile.swift in Sources */,
 				FF79E02D267C75B60088D2C7 /* PostNewIssueUseCase.swift in Sources */,
 				AE6EFF51267E466C00C905FC /* IdentifierModel.swift in Sources */,
+				AEFD8EB32684632500F46832 /* LoginUseCase.swift in Sources */,
 				AEB5149826821C27007DC865 /* IssueFilterViewControllerDelegate.swift in Sources */,
+				AEC6A0B226896C8300E4CF66 /* MockOAuthManager.swift in Sources */,
 				AEE2A4D32670A00300FA6274 /* IssueViewModel.swift in Sources */,
 				FF79E029267C75130088D2C7 /* PreviewViewController.swift in Sources */,
 				FFCDAC5A2683007C00D4ABFF /* FetchIssueDetailUseCase.swift in Sources */,
@@ -849,18 +933,21 @@
 				FF76F8CE2678739B00342633 /* ViewControllerIdentifierable.swift in Sources */,
 				FFAC0E452681B0A900E88E90 /* Comment.swift in Sources */,
 				FF76F8C82678701000342633 /* IssueTrackerDIContainer.swift in Sources */,
+				AE90D87F2684F1C8004719C5 /* Alertable.swift in Sources */,
 				FFAC0E3F268182BA00E88E90 /* NewIssue.swift in Sources */,
 				FF89A960266F0BD000983577 /* SceneDelegate.swift in Sources */,
 				FFCDAC692685717E00D4ABFF /* TextAreaCheckableDelegate.swift in Sources */,
 				AEB5547A267B2B1D003F631E /* IssueFilterViewController.swift in Sources */,
+				AEFD8EA926842BF800F46832 /* LoginURL.swift in Sources */,
 				AE7D391B2671A91400BF9487 /* UINibCreatable.swift in Sources */,
+				AEFD8EB12684596C00F46832 /* KeychainManager.swift in Sources */,
 				AE011CED267F8A3E00181FB9 /* FilterListCell.swift in Sources */,
 				FFCDAC65268434B800D4ABFF /* NewIssueFilterUseCase.swift in Sources */,
 				FF76F8B52677300300342633 /* UIBarButtonItem+setTitle.swift in Sources */,
+				AEFD8EAF2684502A00F46832 /* Keychain.swift in Sources */,
+				AEFD8EB526846F7A00F46832 /* LoginViewModel.swift in Sources */,
 				FFE2AA122681B4D10026EBD5 /* IssueDetailViewController.swift in Sources */,
 				FFCDAC672685479E00D4ABFF /* FilterUseCase.swift in Sources */,
-				FF89A999267077E800983577 /* User.swift in Sources */,
-				AEE2A4D52670A8C000FA6274 /* IssueLabel.swift in Sources */,
 				FFC803D2268971CC000D6ACE /* IssueDetailMockData.swift in Sources */,
 				FFCDAC63268322C100D4ABFF /* OpenCloseLabel.swift in Sources */,
 				AE011CF1267F8A8300181FB9 /* FilterViewModel.swift in Sources */,
@@ -869,6 +956,9 @@
 				AE6EFF53267E4C4B00C905FC /* FilterListMock.swift in Sources */,
 				AE011CF6267FAA1000181FB9 /* IssueListFilterUseCase.swift in Sources */,
 				AE7505332670EE0600BA14F7 /* UIColor+hexToUIColor.swift in Sources */,
+				AEB5149D26825A99007DC865 /* OAuthManager.swift in Sources */,
+				AEB5149A2682380A007DC865 /* LoginViewController.swift in Sources */,
+				AE90D8812684F30E004719C5 /* MyAccountViewController.swift in Sources */,
 				FF89A997267075CD00983577 /* Issue.swift in Sources */,
 				FF89A99D2670784200983577 /* Milestone.swift in Sources */,
 				AE011CF4267F8C7600181FB9 /* FetchFilterUseCase.swift in Sources */,
@@ -1315,7 +1405,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FF79E016267C73570088D2C7 /* XCRemoteSwiftPackageReference "MarkdownView" */ = {
+		FFBEB0182685AE7500617054 /* XCRemoteSwiftPackageReference "MarkdownView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/keitaoouchi/MarkdownView";
 			requirement = {
@@ -1331,18 +1421,31 @@
 				minimumVersion = 6.3.0;
 			};
 		};
+		FFBEB01B2685AE9600617054 /* XCRemoteSwiftPackageReference "JWTDecode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/JWTDecode.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FF79E017267C73570088D2C7 /* MarkdownView */ = {
+		FFBEB0192685AE7500617054 /* MarkdownView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FF79E016267C73570088D2C7 /* XCRemoteSwiftPackageReference "MarkdownView" */;
+			package = FFBEB0182685AE7500617054 /* XCRemoteSwiftPackageReference "MarkdownView" */;
 			productName = MarkdownView;
 		};
 		FFC803D626899288000D6ACE /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FFC803D526899288000D6ACE /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		FFBEB01C2685AE9600617054 /* JWTDecode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFBEB01B2685AE9600617054 /* XCRemoteSwiftPackageReference "JWTDecode" */;
+			productName = JWTDecode;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
