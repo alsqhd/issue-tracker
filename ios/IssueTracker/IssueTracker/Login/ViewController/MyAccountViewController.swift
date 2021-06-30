@@ -22,9 +22,9 @@ extension MyAccountViewController: ViewControllerIdentifierable {
 
 class MyAccountViewController: UIViewController {
     
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet private weak var profileImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var emailLabel: UILabel!
     
     var viewModel: MyAccountViewModel!
     

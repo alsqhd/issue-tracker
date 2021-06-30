@@ -21,7 +21,7 @@ final class IssueDetailViewController: UIViewController, ViewControllerIdentifie
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var numberLabel: UILabel!
     @IBOutlet private weak var stateDescriptionLabel: UILabel!
-    @IBOutlet weak var openStateLabel: OpenCloseLabel!
+    @IBOutlet private weak var openStateLabel: OpenCloseLabel!
     @IBOutlet private weak var commentsTableView: UITableView!
     @IBOutlet private weak var newCommentButton: UIButton!
     
