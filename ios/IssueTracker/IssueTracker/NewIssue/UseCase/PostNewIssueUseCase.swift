@@ -14,10 +14,10 @@ protocol PostNewIssueUseCase {
 
 final class DefaultPostNewIssueUseCase: PostNewIssueUseCase {
     
-    private var networkManager: NetworkManageable
+    private var networkManager: NetworkManagerable
     private var cancelBag = Set<AnyCancellable>()
     
-    init(_ networkManager: NetworkManageable) {
+    init(_ networkManager: NetworkManagerable) {
         self.networkManager = networkManager
     }
     

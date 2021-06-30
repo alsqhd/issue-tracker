@@ -15,10 +15,10 @@ protocol FetchIssueDetailUseCase {
 
 final class DefaultFetchIssueDetailUseCase: FetchIssueDetailUseCase {
 
-    private var networkManager: NetworkManageable
+    private var networkManager: NetworkManagerable
     private var cancelBag = Set<AnyCancellable>()
     
-    init(networkManager: NetworkManageable) {
+    init(networkManager: NetworkManagerable) {
         self.networkManager = networkManager
     }
     

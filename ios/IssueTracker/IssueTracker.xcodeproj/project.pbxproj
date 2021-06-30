@@ -65,6 +65,10 @@
 		FFAC0E3F268182BA00E88E90 /* NewIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAC0E3E268182BA00E88E90 /* NewIssue.swift */; };
 		FFAC0E452681B0A900E88E90 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAC0E442681B0A900E88E90 /* Comment.swift */; };
 		FFAC0E472681B0F100E88E90 /* IssueDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAC0E462681B0F100E88E90 /* IssueDetail.swift */; };
+		FFC803D2268971CC000D6ACE /* IssueDetailMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC803D1268971CC000D6ACE /* IssueDetailMockData.swift */; };
+		FFC803D426899172000D6ACE /* UIImageView+imageLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC803D326899172000D6ACE /* UIImageView+imageLoad.swift */; };
+		FFC803D726899288000D6ACE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FFC803D626899288000D6ACE /* Kingfisher */; };
+		FFC803D9268ADE8F000D6ACE /* EmojiLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC803D8268ADE8F000D6ACE /* EmojiLabel.swift */; };
 		FFCDAC5A2683007C00D4ABFF /* FetchIssueDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCDAC592683007C00D4ABFF /* FetchIssueDetailUseCase.swift */; };
 		FFCDAC5C268318CC00D4ABFF /* DateManagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCDAC5B268318CC00D4ABFF /* DateManagable.swift */; };
 		FFCDAC63268322C100D4ABFF /* OpenCloseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCDAC62268322C000D4ABFF /* OpenCloseLabel.swift */; };
@@ -171,6 +175,9 @@
 		FFAC0E3E268182BA00E88E90 /* NewIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIssue.swift; sourceTree = "<group>"; };
 		FFAC0E442681B0A900E88E90 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		FFAC0E462681B0F100E88E90 /* IssueDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetail.swift; sourceTree = "<group>"; };
+		FFC803D1268971CC000D6ACE /* IssueDetailMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailMockData.swift; sourceTree = "<group>"; };
+		FFC803D326899172000D6ACE /* UIImageView+imageLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+imageLoad.swift"; sourceTree = "<group>"; };
+		FFC803D8268ADE8F000D6ACE /* EmojiLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiLabel.swift; sourceTree = "<group>"; };
 		FFCDAC592683007C00D4ABFF /* FetchIssueDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchIssueDetailUseCase.swift; sourceTree = "<group>"; };
 		FFCDAC5B268318CC00D4ABFF /* DateManagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManagable.swift; sourceTree = "<group>"; };
 		FFCDAC62268322C000D4ABFF /* OpenCloseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCloseLabel.swift; sourceTree = "<group>"; };
@@ -203,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFC803D726899288000D6ACE /* Kingfisher in Frameworks */,
 				FF79E018267C73570088D2C7 /* MarkdownView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +305,7 @@
 				FF76F8CD2678739B00342633 /* ViewControllerIdentifierable.swift */,
 				FFCDAC5B268318CC00D4ABFF /* DateManagable.swift */,
 				FFCDAC662685479E00D4ABFF /* FilterUseCase.swift */,
+				FFC803D326899172000D6ACE /* UIImageView+imageLoad.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -549,6 +558,7 @@
 		FFAC0E432681B0A100E88E90 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FFC803D1268971CC000D6ACE /* IssueDetailMockData.swift */,
 				FFAC0E442681B0A900E88E90 /* Comment.swift */,
 				FFAC0E462681B0F100E88E90 /* IssueDetail.swift */,
 				FFE2AA162681C6510026EBD5 /* Emoji.swift */,
@@ -578,6 +588,7 @@
 				FFE2AA192681CA180026EBD5 /* CommentCell.swift */,
 				FFE2AA1A2681CA180026EBD5 /* CommentCell.xib */,
 				FFCDAC62268322C000D4ABFF /* OpenCloseLabel.swift */,
+				FFC803D8268ADE8F000D6ACE /* EmojiLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -636,6 +647,7 @@
 			name = IssueTracker;
 			packageProductDependencies = (
 				FF79E017267C73570088D2C7 /* MarkdownView */,
+				FFC803D626899288000D6ACE /* Kingfisher */,
 			);
 			productName = IssueTracker;
 			productReference = FF89A95A266F0BD000983577 /* IssueTracker.app */;
@@ -718,6 +730,7 @@
 			mainGroup = FF89A951266F0BD000983577;
 			packageReferences = (
 				FF79E016267C73570088D2C7 /* XCRemoteSwiftPackageReference "MarkdownView" */,
+				FFC803D526899288000D6ACE /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = FF89A95B266F0BD000983577 /* Products */;
 			projectDirPath = "";
@@ -804,6 +817,7 @@
 			files = (
 				AED83A4B2677453A00C36CA4 /* NetworkComponents.swift in Sources */,
 				FFCDAC5C268318CC00D4ABFF /* DateManagable.swift in Sources */,
+				FFC803D426899172000D6ACE /* UIImageView+imageLoad.swift in Sources */,
 				FF79E024267C74F00088D2C7 /* NewIssueViewController.swift in Sources */,
 				AE011CEF267F8A5100181FB9 /* SectionListCell.swift in Sources */,
 				AECEA445266F3AD900855F20 /* IssueCell.swift in Sources */,
@@ -847,6 +861,7 @@
 				FFCDAC672685479E00D4ABFF /* FilterUseCase.swift in Sources */,
 				FF89A999267077E800983577 /* User.swift in Sources */,
 				AEE2A4D52670A8C000FA6274 /* IssueLabel.swift in Sources */,
+				FFC803D2268971CC000D6ACE /* IssueDetailMockData.swift in Sources */,
 				FFCDAC63268322C100D4ABFF /* OpenCloseLabel.swift in Sources */,
 				AE011CF1267F8A8300181FB9 /* FilterViewModel.swift in Sources */,
 				FF89A999267077E800983577 /* User.swift in Sources */,
@@ -857,6 +872,7 @@
 				FF89A997267075CD00983577 /* Issue.swift in Sources */,
 				FF89A99D2670784200983577 /* Milestone.swift in Sources */,
 				AE011CF4267F8C7600181FB9 /* FetchFilterUseCase.swift in Sources */,
+				FFC803D9268ADE8F000D6ACE /* EmojiLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1307,6 +1323,14 @@
 				minimumVersion = 1.7.1;
 			};
 		};
+		FFC803D526899288000D6ACE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1314,6 +1338,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FF79E016267C73570088D2C7 /* XCRemoteSwiftPackageReference "MarkdownView" */;
 			productName = MarkdownView;
+		};
+		FFC803D626899288000D6ACE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC803D526899288000D6ACE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
