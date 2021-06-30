@@ -59,9 +59,9 @@ extension SceneFlowCoordinator {
         let issueListVCAction = IssueListViewControllerAction(showNewIssueView: showNewIssueView, showIssueDetailView: showIssueDetailView(_:), showFilterView: showFilterView(_:_:))
         let issueListViewController = dependencies.makeIssueListNavigationController(issueListVCAction)
         self.issueListViewController = issueListViewController
-        let loginViewController = dependencies.makeMyAccountViewController()
+        let myAccountViewController = dependencies.makeMyAccountViewController()
        
-        let viewControllers = [issueListViewController, loginViewController]
+        let viewControllers = [issueListViewController, myAccountViewController]
         let tabBarController = dependencies.makeIssueListTabBarController(viewControllers)
 
         rootVC?.setNavigationBarHidden(true, animated: false)

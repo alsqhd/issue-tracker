@@ -37,12 +37,12 @@ extension IssueTrackerDIContainer {
 
 extension IssueTrackerDIContainer {
     
-    private func makeLoginManager() -> OAuthManagerable {
+    private func makeOAuthManager() -> OAuthManagerable {
         return MockOAuthManager(networkManager: networkManager)
     }
     
     private func makeLoginUseCase() -> LoginUseCase {
-        return LoginUseCase(loginManager: makeLoginManager())
+        return LoginUseCase(loginManager: makeOAuthManager())
     }
     
     private func makeLoginViewModel() -> LoginViewModel {
