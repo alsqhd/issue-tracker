@@ -58,4 +58,9 @@ extension LoginUseCase {
         return $error.eraseToAnyPublisher()
     }
     
+    func logout() {
+        KeychainManager.delete()
+        LoginManager.shared.checkLogin()
+    }
+    
 }

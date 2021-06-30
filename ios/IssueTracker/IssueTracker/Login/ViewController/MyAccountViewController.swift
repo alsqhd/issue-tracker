@@ -30,7 +30,7 @@ class MyAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+        setTabBarUI()
         fillUI()
     }
     
@@ -39,20 +39,20 @@ class MyAccountViewController: UIViewController {
 
 extension MyAccountViewController {
     
-    private func setUI() {
-        viewModel.fillUI { [weak self] profileImage, _, _ in
-            self?.tabBarItem.title = "Profile"
-            self?.tabBarItem.image = profileImage.withRenderingMode(.alwaysOriginal)
-            self?.tabBarItem.imageInsets = UIEdgeInsets(top: 110, left: 110, bottom: 110, right: 110)
-        }
+    private func setTabBarUI() {
+        let userImage = viewModel.user?.profileImage
+        
+        tabBarItem.title = "Profile"
+        tabBarItem.image = userImage.withRenderingMode(.alwaysOriginal)
+        tabBarItem.imageInsets = UIEdgeInsets(top: 110, left: 110, bottom: 110, right: 110)
     }
     
     private func fillUI() {
-        viewModel.fillUI { [weak self] profileImage, name, email in
-            self?.profileImageView.image = profileImage
-            self?.nameLabel.text = name
-            self?.emailLabel.text = email
-        }
+        guard let user = viewModel.user else { return }
+        
+        self.profileImageView.image = user.image
+        self.nameLabel.text = user.name
+        self.emailLabel.text = user.email
     }
     
     @IBAction func logoutButtonTouched(_ sender: UIButton) {

@@ -9,16 +9,15 @@ import UIKit
 
 class MyAccountViewModel {
     
-    func fillUI(completion: @escaping (UIImage, String, String) -> ()) {
-        guard let user = KeychainManager.loadUser() else { return }
-        
-        let image = convert(imageUrlString: user.profileImage)
-        let name = user.name
-        let email = user.email
-        
-        completion(image, name, email)
+    private(set) var user: User!
+    private var loginUseCase: LoginUseCase
+    
+    init(loginUseCase: LoginUseCase) {
+        self.user = KeychainManager.loadUser()
+        self.loginUseCase = loginUseCase
     }
     
+    // Dumba merge 후 수정
     private func convert(imageUrlString: String) -> UIImage {
         guard let url = URL(string: imageUrlString) else { return UIImage() }
         let data = try? Data(contentsOf: url)
@@ -26,8 +25,7 @@ class MyAccountViewModel {
     }
     
     func logout() {
-        KeychainManager.delete()
-        LoginManager.shared.checkLogin()
+        loginUseCase.logout()
     }
     
 }

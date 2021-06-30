@@ -49,12 +49,16 @@ extension IssueTrackerDIContainer {
         return LoginViewModel(loginUseCase: makeLoginUseCase())
     }
     
+    private func makeMyAccountViewModel() -> MyAccountViewModel {
+        return MyAccountViewModel(loginUseCase: makeLoginUseCase())
+    }
+    
     func makeLoginViewController() -> LoginViewController {
         return LoginViewController.create(makeLoginViewModel())
     }
     
     func makeMyAccountViewController() -> MyAccountViewController {
-        return MyAccountViewController.create(MyAccountViewModel())
+        return MyAccountViewController.create(makeMyAccountViewModel())
     }
     
 }
