@@ -35,7 +35,7 @@ extension EmojiLabel {
     }
 
     func fillUI(_ emoji: Emoji) {
-        text = emoji.value + " " + String(emoji.count)
+        text = "\(emoji.value) \(String(emoji.count))"
         configureConstraint()
     }
     
